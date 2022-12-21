@@ -16,7 +16,7 @@
     <!-- bootstrap - css datatable-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap4.min.css">
-
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <!-- jquery - bootstrap - datatable-->
     <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
@@ -32,7 +32,7 @@
     <script>
         $(document).ready(function () {
             $('#datatableUsers').DataTable({
-                order: [[6, 'desc']],
+                order: [[7, 'desc']],
             });
         });
     </script>
@@ -43,6 +43,7 @@
             <table id="datatableUsers" class="table table-striped table-bordered table-responsive" style="width:100%">
                 <thead>
                     <tr>
+                        <th></th>
                         <th>ID</th>
                         <th>SEGMENTATION_ID</th>
                         <th>USER_ID</th>
@@ -55,7 +56,8 @@
                 <tbody>
                     @foreach ($users as $user)
                         <tr>
-                            <th><a href="/users/{{ $user->id }}">{{ $user->id }}</a></th>
+                            <th><a href="/users/{{ $user->id }}" class="btn-info"><i class="fa-solid fa-magnifying-glass"></i></a></th>
+                            <th><a href="/users/{{ $user->id }}" class="btn-info">{{ $user->id }}</a></th>
                             <th>{{ $user->segmentation_id }}</th>
                             <th>{{ $user->user_id }}</th>
                             <th>{{ $user->identification_number }}</th>
