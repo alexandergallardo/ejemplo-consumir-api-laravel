@@ -56,8 +56,8 @@
                 <tbody>
                     @foreach ($users as $user)
                         <tr>
-                            <th><a href="/users/{{ $user->id }}" class="btn-info"><i class="fa-solid fa-magnifying-glass"></i></a></th>
-                            <th><a href="/users/{{ $user->id }}" class="btn-info">{{ $user->id }}</a></th>
+                            <th><a href="/users/{{$user->id}}" class="btn-info"><i class="fa-solid fa-magnifying-glass"></i></a></th>
+                            <th><a href="/users/{{$user->id}}">{{ $user->id }}</a></th>
                             <th>{{ $user->segmentation_id }}</th>
                             <th>{{ $user->user_id }}</th>
                             <th>{{ $user->identification_number }}</th>
