@@ -11,5 +11,8 @@
 - npm install
 - php artisan serve
 
-#### Url:  http://localhost:8000/users
+
+#### Url para probar el consumo de API externa:  http://localhost:8000/users
+
+### Url para probar api desarrollada:  http://localhost:8000/api/user/{id}
 
